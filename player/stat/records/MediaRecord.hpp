@@ -1,20 +1,18 @@
 #pragma once
 
-#include "Record.hpp"
+#include "stat/records/Record.hpp"
+#include <memory>
 
-namespace Stats
-{
-    class MediaRecord : public Record
-    {
-        using Record::Record;
+namespace Stats {
+class MediaRecord : public Record {
+  using Record::Record;
 
-    public:
-        static std::unique_ptr<MediaRecord> create(int scheduleId,
-                                                   int parentId,
-                                                   int id,
-                                                   const PlayingTime& interval,
-                                                   int count = 1);
+public:
+  static std::unique_ptr<MediaRecord> create(int scheduleId, int parentId,
+                                             int id,
+                                             const PlayingTime &interval,
+                                             int count = 1);
 
-        void apply(RecordVisitor& visitor) override;
-    };
-}
+  void apply(RecordVisitor &visitor) override;
+};
+} // namespace Stats

@@ -2,7 +2,7 @@
 
 #include "common/types/Uri.hpp"
 
-#include <webkit/webkit.h>
+#include <webkit2/webkit2.h>
 
 namespace ph = std::placeholders;
 
@@ -13,6 +13,9 @@ WebViewGtk::WebViewGtk(int width, int height) : WidgetGtk{handler_}
     webView_ = reinterpret_cast<WebKitWebView*>(webkit_web_view_new());
     auto widget = Gtk::manage(Glib::wrap(reinterpret_cast<GtkWidget*>(webView_)));
     handler_.add(*widget);
+
+    auto settings = webkit_settings_new(); 
+    webkit_settings_set_hardware_acceleration_policy(settings, WEBKIT_HARDWARE_ACCELERATION_POLICY_ALWAYS);
 
     // GTK+ doesn't change the physical size of the widget immediately. Instead, we need to wait for size-allocate
     // signal. However, it emits too often even if the widget hasn't been actually resized so we block it after handler
@@ -50,7 +53,9 @@ void WebViewGtk::enableTransparency()
     handler_.signal_screen_changed().connect(std::bind(&WebViewGtk::screenChanged, this, ph::_1));
     screenChanged(handler_.get_screen());
 
-    webkit_web_view_set_transparent(webView_, true);
+    GdkRGBA background_color;
+    gdk_rgba_parse(&background_color, "rgba(0,0,0,0)");
+    webkit_web_view_set_background_color(webView_, &background_color);
 }
 
 void WebViewGtk::screenChanged(const Glib::RefPtr<Gdk::Screen>& screen)

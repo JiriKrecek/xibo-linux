@@ -1,6 +1,5 @@
 #include "Recorder.hpp"
 
-#include "stat/records/XmlFormatter.hpp"
 #include "stat/storage/DatabaseProvider.hpp"
 #include "stat/storage/DtoConverter.hpp"
 

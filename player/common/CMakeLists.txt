@@ -1,6 +1,6 @@
 project(common)
 
-find_package(Boost 1.70 EXACT REQUIRED system thread filesystem date_time)
+find_package(Boost REQUIRED thread date_time)
 
 # TODO move to utils
 add_library(${PROJECT_NAME}
@@ -18,8 +18,7 @@ add_library(${PROJECT_NAME}
 )
 
 target_link_libraries(${PROJECT_NAME}
-    Boost::thread
-    Boost::system
+    Boost::thread 
 )
 
 add_subdirectory(fs)

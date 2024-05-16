@@ -1,19 +1,11 @@
 #include "Timer.hpp"
 
-Timer::~Timer()
-{
-    stop();
+Timer::~Timer() { stop(); }
+
+void Timer::stop() {
+  if (active()) {
+    timerConnection_.disconnect();
+  }
 }
 
-void Timer::stop()
-{
-    if (active())
-    {
-        timerConnection_.disconnect();
-    }
-}
-
-bool Timer::active() const
-{
-    return timerConnection_.connected();
-}
+bool Timer::active() const { return timerConnection_.connected(); }

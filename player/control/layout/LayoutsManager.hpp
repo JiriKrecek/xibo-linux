@@ -1,46 +1,46 @@
 #pragma once
 
 #include "control/layout/MainLayout.hpp"
+#include "schedule/Scheduler.hpp"
 
 #include <map>
 #include <memory>
 #include <vector>
 
-class Scheduler;
-class FileCache;
-namespace Stats
-{
-    class Recorder;
+namespace Stats {
+class Recorder;
 }
 
-using MainLayoutLoaded = boost::signals2::signal<void(const std::shared_ptr<Xibo::Widget>&)>;
-using OverlaysLoaded = boost::signals2::signal<void(const std::vector<std::shared_ptr<Xibo::Widget>>&)>;
+using MainLayoutLoaded =
+    boost::signals2::signal<void(const std::shared_ptr<Xibo::Widget> &)>;
+using OverlaysLoaded = boost::signals2::signal<void(
+    const std::vector<std::shared_ptr<Xibo::Widget>> &)>;
 
-class LayoutsManager
-{
+class LayoutsManager {
 public:
-    LayoutsManager(Scheduler& scheduler, Stats::Recorder& statsRecorder, FileCache& fileCache, bool statsEnabled);
+  LayoutsManager(Scheduler &scheduler, Stats::Recorder &statsRecorder,
+                 FileCache &fileCache, bool statsEnabled);
 
-    void fetchMainLayout();
-    void fetchOverlays();
-    void statsEnabled(bool enable);
+  void fetchMainLayout();
+  void fetchOverlays();
+  void statsEnabled(bool enable);
 
-    MainLayoutLoaded& mainLayoutFetched();
-    OverlaysLoaded& overlaysFetched();
-
-private:
-    template <typename LayoutParser>
-    std::unique_ptr<Xibo::MainLayout> createLayout(int layoutId);
+  MainLayoutLoaded &mainLayoutFetched();
+  OverlaysLoaded &overlaysFetched();
 
 private:
-    Scheduler& scheduler_;
-    Stats::Recorder& statsRecorder_;
-    FileCache& fileCache_;
-    bool statsEnabled_;
+  template <typename LayoutParser>
+  std::unique_ptr<Xibo::MainLayout> createLayout(int layoutId);
 
-    std::unique_ptr<Xibo::MainLayout> currentMainLayout_;
-    std::map<int, std::unique_ptr<Xibo::MainLayout>> overlayLayouts_;
+private:
+  Scheduler &scheduler_;
+  Stats::Recorder &statsRecorder_;
+  FileCache &fileCache_;
+  bool statsEnabled_;
 
-    MainLayoutLoaded mainLayoutFetched_;
-    OverlaysLoaded overlaysFetched_;
+  std::unique_ptr<Xibo::MainLayout> currentMainLayout_;
+  std::map<int, std::unique_ptr<Xibo::MainLayout>> overlayLayouts_;
+
+  MainLayoutLoaded mainLayoutFetched_;
+  OverlaysLoaded overlaysFetched_;
 };

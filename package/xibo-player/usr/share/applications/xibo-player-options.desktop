@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=Xibo Player Options
+Comment=Xibo Player Options
+Exec=/usr/bin/xibo-options
+Terminal=true
+Icon=/usr/share/xibo/xibo-player.png
+Categories=AudioVideo
+Version=1.0

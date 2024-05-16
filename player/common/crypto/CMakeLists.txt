@@ -20,8 +20,8 @@ target_link_libraries(${PROJECT_NAME}
     Boost::boost
     ${CRYPTOPP}
     ${OPENSSL_LINK_LIBRARIES}
-)
-
-target_include_directories(${PROJECT_NAME}
+    )
+    
+    target_include_directories(${PROJECT_NAME}
     PRIVATE ${OPENSSL_INCLUDE_DIRS}
 )

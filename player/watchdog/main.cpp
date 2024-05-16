@@ -7,44 +7,8 @@
 
 #include <boost/program_options.hpp>
 
-void setupNewConfigDir()
-{
-#ifdef SNAP_ENABLED
-    try
-    {
-        const std::string CmsSettingsFile = "cmsSettings.xml";
-        const std::string PlayerSettingsFile = "playerSettings.xml";
-        const std::string PrivateKeyFile = "id_rsa";
-        const std::string PublicKeyFile = "id_rsa.pub";
-        const std::string ResourcesDir = "resources";
-        if (FileSystem::exists(AppConfig::oldConfigDirectory() / CmsSettingsFile))
-        {
-            CmsSettings settings;
-            settings.fromFile(AppConfig::oldConfigDirectory() / CmsSettingsFile);
-
-            std::vector<std::string> filesToMove{CmsSettingsFile, PlayerSettingsFile, PrivateKeyFile, PublicKeyFile};
-            for (auto&& file : filesToMove)
-            {
-                FileSystem::move(AppConfig::oldConfigDirectory() / file, AppConfig::configDirectory() / file);
-            }
-
-            if (settings.resourcesPath() == AppConfig::oldConfigDirectory() / ResourcesDir)
-            {
-                settings.resourcesPath().setValue(AppConfig::configDirectory() / ResourcesDir);
-                settings.saveTo(AppConfig::cmsSettingsPath());
-            }
-        }
-    }
-    catch (std::exception& e)
-    {
-        std::cout << "Error during setting up new config directory: " << e.what() << std::endl;
-    }
-#endif
-}
 int main(int argc, char** argv)
 {
-    setupNewConfigDir();
-
     try
     {
         boost::program_options::options_description desc{"Options"};
@@ -54,9 +18,6 @@ int main(int argc, char** argv)
         boost::program_options::variables_map vm;
         store(parse_command_line(argc, argv, desc), vm);
 
-#if defined(SNAP_ENABLED)
-        std::cout << "Running in SNAP environment" << std::endl;
-#endif
 
         if (FileSystem::exists(AppConfig::cmsSettingsPath()) && vm.count("config-app") == 0)
         {

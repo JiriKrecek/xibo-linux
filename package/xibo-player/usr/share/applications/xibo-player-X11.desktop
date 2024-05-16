@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=Xibo Player forced X11
+Comment=Xibo Player forced X11
+Exec=env GDK_BACKEND=x11 /usr/bin/xibo/xibo-watchdog
+Terminal=true
+Icon=/usr/share/xibo/xibo-player.png
+Categories=AudioVideo
+Version=1.0

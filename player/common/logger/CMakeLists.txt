@@ -1,6 +1,6 @@
 project(logger)
 
-find_package(spdlog 1.4.1 REQUIRED)
+find_package(spdlog 1.11.0 REQUIRED)
 
 add_library(${PROJECT_NAME}
     Logging.cpp

@@ -64,6 +64,7 @@ private:
             case spdlog::level::warn: return "info";
             case spdlog::level::err:
             case spdlog::level::critical:
+            case spdlog::level::n_levels:
             case spdlog::level::off: return "error";
         }
         return {};

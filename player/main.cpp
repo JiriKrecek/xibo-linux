@@ -19,7 +19,7 @@ void signalStacktraceHandler(int signum)
     raise(signum);
 }
 
-int main(int /*argc*/, char** /*argv*/)
+int main(int /*argc*/, char ** /*argv*/)
 {
     std::cout << AppConfig::version() << std::endl;
 
@@ -29,11 +29,11 @@ int main(int /*argc*/, char** /*argv*/)
 
     try
     {
-        auto&& app = XiboApp::create("org.gtkmm.xibo");
+        auto &&app = XiboApp::create("org.gtkmm.xibo");
 
         return app.run();
     }
-    catch (std::exception& e)
+    catch (std::exception &e)
     {
         Log::error("[Main] {}", e.what());
     }

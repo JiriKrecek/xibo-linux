@@ -1,0 +1,7 @@
+Package: xibo-player
+Version: 1.2
+Essential: no
+Priority: optional
+Depends: libsqlite3-0, gstreamer1.0-vaapi, gstreamer1.0-gtk3, libglibmm-2.68-1, libgstreamer1.0-0, libgtkmm-3.0-1v5, libwebkit2gtk-4.1-0, libboost-program-options1.81.0, libboost-filesystem1.81.0, libboost-thread1.81.0
+Maintainer: Jiri Krecek
+Description: Xibo Player for Linux

@@ -3,21 +3,19 @@
 #include "RecordDto.hpp"
 #include "stat/records/RecordVisitor.hpp"
 
-namespace Stats
-{
-    class DtoConverter : public RecordVisitor
-    {
-    public:
-        RecordDto dto() const;
+namespace Stats {
+class DtoConverter : public RecordVisitor {
+public:
+  RecordDto dto() const;
 
-    protected:
-        void visit(const LayoutRecord& record) override;
-        void visit(const MediaRecord& record) override;
+protected:
+  void visit(const LayoutRecord &record) override;
+  void visit(const MediaRecord &record) override;
 
-    private:
-        void fillGenericData(const Record& record);
+private:
+  void fillGenericData(const Record &record);
 
-    private:
-        RecordDto dto_;
-    };
-}
+private:
+  RecordDto dto_;
+};
+} // namespace Stats

@@ -34,5 +34,5 @@ void ProcessWatcher::setupSignalHandler()
 {
     struct sigaction action;
     action.sa_handler = signalHandler;
-    sigaction(SIGTERM, &action, nullptr);
+    sigaction(SIGTERM, &action, NULL);
 }

@@ -1,20 +1,37 @@
 #pragma once
 
+#include <fmt/core.h>
 #include <string>
 
-class PlayerError
-{
+class PlayerError {
 public:
-    PlayerError() = default;
-    PlayerError(std::string_view domain, std::string_view message);
+  PlayerError() = default;
+  PlayerError(std::string_view domain, std::string_view message);
 
-    explicit operator bool() const noexcept;
-    const std::string& domain() const;
-    const std::string& message() const;
+  explicit operator bool() const noexcept;
+  const std::string &domain() const;
+  const std::string &message() const;
 
-    friend std::ostream& operator<<(std::ostream& out, const PlayerError& error);
+  friend std::ostream &operator<<(std::ostream &out, const PlayerError &error);
 
 private:
-    std::string domain_;
-    std::string message_;
+  std::string domain_;
+  std::string message_;
+};
+
+// template <> struct std::formatter<PlayerError> : std::formatter<std::string>
+// {
+//   auto format(PlayerError error, format_context &ctx) const {
+//     return formatter<string>::format(
+//         std::format("[{}] {}", error.domain(), error.message()), ctx);
+//   }
+// };
+
+template <typename T>
+struct fmt::formatter<
+    T, std::enable_if_t<std::is_base_of<PlayerError, T>::value, char>>
+    : fmt::formatter<std::string> {
+  auto format(const PlayerError &e, format_context &ctx) const {
+    return fmt::formatter<std::string>::format("[" + e.domain() + "] ", ctx);
+  }
 };

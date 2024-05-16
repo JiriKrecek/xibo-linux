@@ -1,3 +1,3 @@
-rm -rf build
+rm -rfI build
 mkdir build
 ./rebuild.sh

@@ -6,8 +6,6 @@ add_library(${PROJECT_NAME}
     Dbus.cpp
     Dbus.hpp
     HardwareKey.hpp
-    HardwareKeyGenerator.cpp
-    HardwareKeyGenerator.hpp
     MacAddress.hpp
     MacAddressFetcher.cpp
     MacAddressFetcher.hpp
@@ -18,7 +16,6 @@ add_library(${PROJECT_NAME}
 
 target_link_libraries(${PROJECT_NAME}
     crypto
-    Boost::boost
     ${DBUS_LINK_LIBRARIES}
 )
 

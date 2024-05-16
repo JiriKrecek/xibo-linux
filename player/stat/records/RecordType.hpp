@@ -1,15 +1,11 @@
 #pragma once
 
-#include <optional>
+#include <boost/optional/optional.hpp>
+#include <string>
 
-namespace Stats
-{
-    enum class RecordType
-    {
-        Layout,
-        Media
-    };
+namespace Stats {
+enum class RecordType { Layout, Media };
 
-    std::string recordTypeToString(RecordType t);
-    std::optional<RecordType> recordTypeFromSting(const std::string& t);
-}
+std::string recordTypeToString(RecordType t);
+boost::optional<RecordType> recordTypeFromSting(const std::string &t);
+} // namespace Stats

@@ -8,17 +8,17 @@
 
 const std::string ScheduleWritePath = "fakeScheduleWrite.xml";
 
-TEST(ScheduleSerializer, SaveToInvalidFile)
-{
-    ScheduleSerializer serializer;
+TEST(ScheduleSerializer, SaveToInvalidFile) {
+  ScheduleSerializer serializer;
 
-    ASSERT_THROW(serializer.scheduleTo(ScheduleTests::schedule(), "invalid/path"), ScheduleSerializer::Error);
+  ASSERT_THROW(serializer.scheduleTo(ScheduleTests::schedule(), "invalid/path"),
+               ScheduleSerializer::Error);
 }
 
-TEST(ScheduleSerializer, SaveToFile)
-{
-    ScheduleSerializer serializer;
-    serializer.scheduleTo(ScheduleTests::schedule(), ScheduleWritePath);
+TEST(ScheduleSerializer, SaveToFile) {
+  ScheduleSerializer serializer;
+  serializer.scheduleTo(ScheduleTests::schedule(), ScheduleWritePath);
 
-    ASSERT_EQ(ScheduleTests::schedule(), ScheduleParser{}.scheduleFrom(FilePath{ScheduleWritePath}));
+  ASSERT_EQ(ScheduleTests::schedule(),
+            ScheduleParser{}.scheduleFrom(FilePath{ScheduleWritePath}));
 }

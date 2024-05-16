@@ -9,8 +9,10 @@ public:
     void loadSettingsFrom(const FilePath& file, CmsSettings& settings) override;
     void saveSettingsTo(const FilePath& file, const CmsSettings& settings) override;
 
-    boost::optional<Uri> proxyFrom(const std::string& domain, const std::string& username, const std::string& password);
+    boost::optional<Uri> proxyFrom(const std::string &domain,
+                                   const std::string &username,
+                                   const std::string &password);
 
-protected:
+  protected:
     XmlDocVersion currentVersion() const override;
 };

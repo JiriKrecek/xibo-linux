@@ -1,9 +1,8 @@
 #pragma once
 
+#include "common/fs/FilePath.hpp"
 #include <cryptopp/pem.h>
 #include <cryptopp/rsa.h>
-
-class FilePath;
 
 struct RsaKeyPair
 {

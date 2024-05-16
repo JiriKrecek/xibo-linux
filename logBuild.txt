@@ -1,0 +1,203 @@
+-- The C compiler identification is GNU 12.3.0
+-- The CXX compiler identification is GNU 12.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found PkgConfig: /usr/bin/pkg-config (found version "1.8.1") 
+-- Checking for module 'gtkmm-3.0'
+--   Found gtkmm-3.0, version 3.24.8
+-- Checking for module 'glibmm-2.4'
+--   Found glibmm-2.4, version 2.66.7
+-- Found SQLite3: /usr/include (found version "3.45.1") 
+-- Checking for module 'x11'
+--   Found x11, version 1.8.7
+-- Checking for modules 'gstreamer-1.0>=1.16.2;gstreamer-base-1.0>=1.16.2;gstreamer-plugins-base-1.0>=1.16.2;gstreamer-pbutils-1.0>=1.16.2;gstreamer-video-1.0>=1.16.2;gstreamer-gl-1.0>=1.16.2;gstreamer-app-1.0>=1.16.2'
+--   Found gstreamer-1.0, version 1.24.3
+--   Found gstreamer-base-1.0, version 1.24.3
+--   Found gstreamer-plugins-base-1.0, version 1.22.10
+--   Found gstreamer-pbutils-1.0, version 1.22.10
+--   Found gstreamer-video-1.0, version 1.22.10
+--   Found gstreamer-gl-1.0, version 1.22.10
+--   Found gstreamer-app-1.0, version 1.22.10
+-- Checking for module 'webkit2gtk-4.0'
+--   Found webkit2gtk-4.0, version 2.42.5
+-- Found GTest: /usr/lib/x86_64-linux-gnu/cmake/GTest/GTestConfig.cmake (found version "1.14.0")  
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: thread date_time 
+-- Checking for module 'openssl'
+--   Found openssl, version 3.1.5
+-- Found Threads: TRUE  
+-- Checking for module 'dbus-1'
+--   Found dbus-1, version 1.14.10
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: program_options 
+-- Checking for module 'libzmq>=4.3.2'
+--   Found libzmq, version 4.3.5
+-- Configuring done (6.4s)
+-- Generating done (0.4s)
+-- Build files have been written to: /home/jirka/Xibo/trunk/build
+[1/160] Building CXX object stat/CMakeFiles/stat.dir/records/RecordType.cpp.o
+[2/160] Building CXX object stat/CMakeFiles/stat.dir/records/Record.cpp.o
+[3/160] Building CXX object stat/CMakeFiles/stat.dir/records/LayoutRecord.cpp.o
+[4/160] Building CXX object stat/CMakeFiles/stat.dir/records/MediaRecord.cpp.o
+[5/160] Building CXX object stat/CMakeFiles/stat.dir/storage/DtoConverter.cpp.o
+[6/160] Building CXX object stat/CMakeFiles/stat.dir/records/XmlFormatter.cpp.o
+[7/160] Building CXX object control/screenshot/CMakeFiles/screenshot.dir/ScreenShoter.cpp.o
+[8/160] Building CXX object control/transitions/CMakeFiles/transitions.dir/Transition.cpp.o
+[9/160] Building CXX object CMakeFiles/xibo-player.dir/MainLoop.cpp.o
+[10/160] Building CXX object stat/CMakeFiles/stat.dir/storage/DatabaseProvider.cpp.o
+[11/160] Building CXX object stat/CMakeFiles/stat.dir/Recorder.cpp.o
+[12/160] Building CXX object control/transitions/CMakeFiles/transitions.dir/FadeTransitionExecutor.cpp.o
+[13/160] Building CXX object control/transitions/CMakeFiles/transitions.dir/FlyTransitionExecutor.cpp.o
+[14/160] Building CXX object CMakeFiles/xibo-player.dir/main.cpp.o
+[15/160] Building CXX object control/screenshot/gtk/CMakeFiles/screenshot_gtk.dir/X11ScreenShoter.cpp.o
+[16/160] Building CXX object control/transitions/CMakeFiles/transitions.dir/TransitionExecutor.cpp.o
+[17/160] Building CXX object control/layout/CMakeFiles/layout.dir/MainLayoutParser.cpp.o
+[18/160] Building CXX object control/screenshot/CMakeFiles/screenshot.dir/ScreenShotInterval.cpp.o
+[19/160] Building CXX object control/region/CMakeFiles/region.dir/GetMediaPosition.cpp.o
+[20/160] Building CXX object control/region/CMakeFiles/region.dir/RegionParser.cpp.o
+[21/160] Building CXX object control/region/CMakeFiles/region.dir/RegionImpl.cpp.o
+[22/160] Building CXX object control/media/CMakeFiles/media.dir/MediaParsersRepo.cpp.o
+[23/160] Building CXX object control/media/CMakeFiles/media.dir/image/ImageParser.cpp.o
+[24/160] Building CXX object control/layout/CMakeFiles/layout.dir/LayoutsManager.cpp.o
+[25/160] Building CXX object control/layout/CMakeFiles/layout.dir/MainLayoutImpl.cpp.o
+[26/160] Building CXX object CMakeFiles/xibo-player.dir/XiboApp.cpp.o
+[27/160] Building CXX object control/media/CMakeFiles/media.dir/player/audio/AudioNodeParser.cpp.o
+[28/160] Building CXX object control/media/CMakeFiles/media.dir/player/audio/AudioParser.cpp.o
+[29/160] Building CXX object control/media/CMakeFiles/media.dir/image/ImageFactory.cpp.o
+[30/160] Building CXX object control/media/CMakeFiles/media.dir/MediaImpl.cpp.o
+[31/160] Building CXX object control/media/CMakeFiles/media.dir/MediaParser.cpp.o
+[32/160] Building CXX object control/media/CMakeFiles/media.dir/player/video/VideoParser.cpp.o
+[33/160] Building CXX object control/media/CMakeFiles/media.dir/player/audio/AudioFactory.cpp.o
+[34/160] Building CXX object control/media/CMakeFiles/media.dir/player/PlayableMedia.cpp.o
+[35/160] Building CXX object control/media/CMakeFiles/media.dir/player/GstMediaPlayer.cpp.o
+[36/160] Building CXX object control/widgets/CMakeFiles/widgets.dir/KeyboardKey.cpp.o
+[37/160] Building CXX object control/widgets/CMakeFiles/widgets.dir/ImageWidgetFactory.cpp.o
+[38/160] Building CXX object control/media/CMakeFiles/media.dir/webview/WebViewGtk.cpp.o
+[39/160] Building CXX object control/widgets/CMakeFiles/widgets.dir/FixedContainerFactory.cpp.o
+[40/160] Building CXX object control/status/CMakeFiles/status.dir/StatusScreenFormatter.cpp.o
+[41/160] Building CXX object control/media/CMakeFiles/media.dir/player/video/VideoFactory.cpp.o
+[42/160] Linking CXX static library control/status/libstatus.a
+[43/160] Building CXX object control/widgets/gtk/CMakeFiles/widgets_gtk.dir/OutputWindowGtk.cpp.o
+[44/160] Building CXX object control/widgets/gtk/CMakeFiles/widgets_gtk.dir/ImageGtk.cpp.o
+[45/160] Building CXX object control/widgets/CMakeFiles/widgets.dir/OverlayContainerFactory.cpp.o
+[46/160] Building CXX object cms/CMakeFiles/cms.dir/NotifyStatusInfo.cpp.o
+[47/160] Building CXX object cms/CMakeFiles/cms.dir/xmds/GetFile.cpp.o
+[48/160] Building CXX object cms/CMakeFiles/cms.dir/xmds/GetResource.cpp.o
+[49/160] Building CXX object control/media/CMakeFiles/media.dir/webview/WebViewFactory.cpp.o
+[50/160] Building CXX object cms/CMakeFiles/cms.dir/xmds/MediaInventoryItem.cpp.o
+[51/160] Building CXX object cms/CMakeFiles/cms.dir/xmds/MediaInventory.cpp.o
+[52/160] Building CXX object cms/CMakeFiles/cms.dir/xmds/MediaInventoryField.cpp.o
+[53/160] Building CXX object control/media/CMakeFiles/media.dir/webview/LocalWebServer.cpp.o
+[54/160] Building CXX object cms/CMakeFiles/cms.dir/xmds/NotifyStatus.cpp.o
+[55/160] Building CXX object control/widgets/gtk/CMakeFiles/widgets_gtk.dir/StatusScreenGtk.cpp.o
+[56/160] Building CXX object cms/CMakeFiles/cms.dir/RequiredFilesDownloader.cpp.o
+[57/160] Building CXX object control/widgets/gtk/CMakeFiles/widgets_gtk.dir/WindowGtk.cpp.o
+[58/160] Building CXX object cms/CMakeFiles/cms.dir/xmds/Schedule.cpp.o
+[59/160] Linking CXX static library control/widgets/gtk/libwidgets_gtk.a
+[60/160] Building CXX object cms/CMakeFiles/cms.dir/xmds/SubmitLog.cpp.o
+[61/160] Linking CXX static library control/screenshot/gtk/libscreenshot_gtk.a
+[62/160] Building CXX object cms/CMakeFiles/cms.dir/xmds/SubmitScreenShot.cpp.o
+[63/160] Building CXX object cms/CMakeFiles/cms.dir/xmds/RequiredFiles.cpp.o
+[64/160] Linking CXX static library control/widgets/libwidgets.a
+[65/160] Linking CXX static library control/transitions/libtransitions.a
+[66/160] Linking CXX static library control/region/libregion.a
+[67/160] Building CXX object cms/CMakeFiles/cms.dir/CollectionInterval.cpp.o
+[68/160] Building CXX object schedule/CMakeFiles/schedule.dir/LayoutQueue.cpp.o
+[69/160] Building CXX object cms/CMakeFiles/cms.dir/xmds/SubmitStats.cpp.o
+[70/160] Building CXX object schedule/CMakeFiles/schedule.dir/RegularLayoutQueue.cpp.o
+[71/160] Building CXX object cms/CMakeFiles/cms.dir/xmds/RegisterDisplay.cpp.o
+[72/160] Building CXX object control/media/CMakeFiles/media.dir/webview/WebViewParser.cpp.o
+[73/160] Building CXX object schedule/CMakeFiles/schedule.dir/ScheduleItem.cpp.o
+[74/160] Building CXX object schedule/tests/CMakeFiles/schedule_tests.dir/Common.cpp.o
+[75/160] Building CXX object schedule/CMakeFiles/schedule.dir/LayoutSchedule.cpp.o
+[76/160] Building CXX object schedule/CMakeFiles/schedule.dir/ScheduleParser.cpp.o
+[77/160] Building CXX object schedule/CMakeFiles/schedule.dir/ScheduleSerializer.cpp.o
+[78/160] Building CXX object schedule/tests/CMakeFiles/schedule_tests.dir/main.cpp.o
+[79/160] Building CXX object schedule/tests/CMakeFiles/schedule_tests.dir/LayoutScheduleTests.cpp.o
+[80/160] Building CXX object schedule/tests/CMakeFiles/schedule_tests.dir/LayoutQueueTests.cpp.o
+[81/160] Building CXX object cms/CMakeFiles/cms.dir/xmds/XmdsFileDownloader.cpp.o
+[82/160] Building CXX object common/CMakeFiles/common.dir/PlayerError.cpp.o
+[83/160] Linking CXX static library common/libcommon.a
+[84/160] Linking CXX static library control/screenshot/libscreenshot.a
+[85/160] Building CXX object schedule/tests/CMakeFiles/schedule_tests.dir/ScheduleParserTests.cpp.o
+[86/160] Building CXX object common/fs/CMakeFiles/fs.dir/FileSystem.cpp.o
+[87/160] Building CXX object schedule/tests/CMakeFiles/schedule_tests.dir/ScheduleSerializerTests.cpp.o
+[88/160] Linking CXX static library control/media/libmedia.a
+[89/160] Building CXX object schedule/CMakeFiles/schedule.dir/Scheduler.cpp.o
+[90/160] Building CXX object schedule/tests/CMakeFiles/schedule_tests.dir/SchedulerOverlayTests.cpp.o
+[91/160] Building CXX object schedule/tests/CMakeFiles/schedule_tests.dir/SchedulerRegularTests.cpp.o
+[92/160] Building CXX object options/CMakeFiles/xibo-options.dir/main.cpp.o
+[93/160] Building CXX object common/parsing/CMakeFiles/parsing.dir/XmlDocVersion.cpp.o
+[94/160] Building CXX object common/dt/CMakeFiles/dt.dir/DateTime.cpp.o
+[95/160] Building CXX object common/parsing/CMakeFiles/parsing.dir/Parsing.cpp.o
+[96/160] Building CXX object schedule/tests/CMakeFiles/schedule_tests.dir/SchedulerReloadTests.cpp.o
+[97/160] Building CXX object common/parsing/CMakeFiles/parsing.dir/XmlDefaultFileHandler.cpp.o
+[98/160] Building CXX object common/parsing/CMakeFiles/parsing.dir/XmlFileLoaderMissingRoot.cpp.o
+[99/160] Building CXX object common/logger/CMakeFiles/logger.dir/XmlLogsRepo.cpp.o
+[100/160] Building CXX object common/crypto/CMakeFiles/crypto.dir/Md5Hash.cpp.o
+[101/160] Building CXX object common/crypto/CMakeFiles/crypto.dir/CryptoUtils.cpp.o
+[102/160] Building CXX object common/crypto/CMakeFiles/crypto.dir/RsaManager.cpp.o
+[103/160] Building CXX object common/system/CMakeFiles/system.dir/System.cpp.o
+[104/160] Building CXX object common/logger/CMakeFiles/logger.dir/Logging.cpp.o
+[105/160] Building CXX object cms/CMakeFiles/cms.dir/xmds/XmdsRequestSender.cpp.o
+[106/160] Building CXX object common/system/CMakeFiles/system.dir/Dbus.cpp.o
+[107/160] Building CXX object common/dt/CMakeFiles/dt.dir/Timer.cpp.o
+[108/160] Building CXX object common/types/CMakeFiles/types.dir/internal/Authority.cpp.o
+[109/160] Linking CXX static library common/dt/libdt.a
+[110/160] Building CXX object common/system/CMakeFiles/system.dir/MacAddressFetcher.cpp.o
+[111/160] Building CXX object options/CMakeFiles/xibo-options.dir/MainWindowController.cpp.o
+[112/160] Linking CXX static library stat/libstat.a
+[113/160] Building CXX object common/types/CMakeFiles/types.dir/internal/ColorToHexConverter.cpp.o
+[114/160] Linking CXX static library control/layout/liblayout.a
+[115/160] Linking CXX static library control/libcontrol.a
+[116/160] Building CXX object common/types/CMakeFiles/types.dir/internal/Port.cpp.o
+[117/160] Building CXX object common/logger/CMakeFiles/logger.dir/XmlLogsRetriever.cpp.o
+[118/160] Linking CXX static library common/logger/liblogger.a
+[119/160] Building CXX object common/types/CMakeFiles/types.dir/internal/Scheme.cpp.o
+[120/160] Building CXX object common/types/CMakeFiles/types.dir/internal/UriParser.cpp.o
+[121/160] Building CXX object common/types/tests/CMakeFiles/common_tests.dir/main.cpp.o
+[122/160] Building CXX object common/types/CMakeFiles/types.dir/internal/Host.cpp.o
+[123/160] Building CXX object common/types/CMakeFiles/types.dir/internal/UserInfo.cpp.o
+[124/160] Building CXX object common/storage/CMakeFiles/storage.dir/RequiredItems.cpp.o
+[125/160] Building CXX object common/types/tests/CMakeFiles/common_tests.dir/ColorConverterTests.cpp.o
+[126/160] Building CXX object common/types/tests/CMakeFiles/common_tests.dir/UriTests.cpp.o
+[127/160] Building CXX object config/CMakeFiles/config.dir/AppConfig.cpp.o
+[128/160] Building CXX object common/storage/CMakeFiles/storage.dir/FileCacheImpl.cpp.o
+[129/160] Building CXX object config/CMakeFiles/config.dir/PlayerSettingsSerializer.cpp.o
+[130/160] Building CXX object common/types/CMakeFiles/types.dir/Uri.cpp.o
+[131/160] Building CXX object xmr/CMakeFiles/xmr.dir/zmq/Context.cpp.o
+[132/160] Building CXX object xmr/CMakeFiles/xmr.dir/zmq/Exception.cpp.o
+[133/160] Building CXX object config/CMakeFiles/config.dir/CmsSettingsSerializer.cpp.o
+[134/160] Building CXX object config/CMakeFiles/config.dir/PlayerSettings.cpp.o
+[135/160] Building CXX object xmr/CMakeFiles/xmr.dir/XmrChannel.cpp.o
+[136/160] Building CXX object config/CMakeFiles/config.dir/CmsSettings.cpp.o
+[137/160] Linking CXX static library config/libconfig.a
+[138/160] Linking CXX static library common/types/libtypes.a
+[139/160] Linking CXX static library common/parsing/libparsing.a
+[140/160] Linking CXX static library common/fs/libfs.a
+[141/160] Linking CXX static library common/crypto/libcrypto.a
+[142/160] Linking CXX executable tests/common_tests
+FAILED: tests/common_tests 
+: && /usr/bin/c++ -g -static-libgcc -static-libstdc++ common/types/tests/CMakeFiles/common_tests.dir/ColorConverterTests.cpp.o common/types/tests/CMakeFiles/common_tests.dir/main.cpp.o common/types/tests/CMakeFiles/common_tests.dir/UriTests.cpp.o -o tests/common_tests  common/types/libtypes.a  /usr/lib/x86_64-linux-gnu/libgmock.a  common/fs/libfs.a  config/libconfig.a  common/parsing/libparsing.a  common/types/libtypes.a  common/fs/libfs.a  config/libconfig.a  common/parsing/libparsing.a  common/logger/liblogger.a  common/dt/libdt.a  /usr/lib/x86_64-linux-gnu/libboost_date_time.so.1.83.0  /usr/lib/x86_64-linux-gnu/libglibmm-2.4.so  /usr/lib/x86_64-linux-gnu/libgobject-2.0.so  /usr/lib/x86_64-linux-gnu/libglib-2.0.so  /usr/lib/x86_64-linux-gnu/libsigc-2.0.so  /usr/local/lib/libspdlog.a  common/libcommon.a  /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.83.0  /usr/lib/x86_64-linux-gnu/libboost_atomic.so.1.83.0  /usr/lib/x86_64-linux-gnu/libgtest.a && :
+/usr/bin/ld: /usr/lib/x86_64-linux-gnu/libgtest.a(gtest-all.cc.o): undefined reference to symbol '_ZSt21ios_base_library_initv@@GLIBCXX_3.4.32'
+/usr/bin/ld: /lib/x86_64-linux-gnu/libstdc++.so.6: error adding symbols: DSO missing from command line
+collect2: error: ld returned 1 exit status
+[143/160] Linking CXX static library common/system/libsystem.a
+[144/160] Building CXX object watchdog/CMakeFiles/xibo-watchdog.dir/ProcessWatcher.cpp.o
+[145/160] Building CXX object watchdog/CMakeFiles/xibo-watchdog.dir/main.cpp.o
+[146/160] Building CXX object xmr/CMakeFiles/xmr.dir/zmq/Message.cpp.o
+[147/160] Building CXX object xmr/CMakeFiles/xmr.dir/zmq/Socket.cpp.o
+[148/160] Building CXX object networking/CMakeFiles/networking.dir/HttpClient.cpp.o
+[149/160] Building CXX object xmr/CMakeFiles/xmr.dir/zmq/Subscriber.cpp.o
+[150/160] Building CXX object networking/CMakeFiles/networking.dir/HttpSession.cpp.o
+[151/160] Building CXX object xmr/CMakeFiles/xmr.dir/XmrManager.cpp.o
+ninja: build stopped: subcommand failed.
+-- Install configuration: "DEBUG"
+-- Installing: /home/jirka/Xibo/trunk/build/bin/ui.glade
+-- Installing: /home/jirka/Xibo/trunk/build/bin/splash.jpg
