@@ -1,4 +1,5 @@
 #include "common/types/Uri.hpp"
+#include <cassert>
 
 Uri::Authority::Authority(const boost::optional<Uri::UserInfo>& userInfo,
                           const Uri::Host& host,

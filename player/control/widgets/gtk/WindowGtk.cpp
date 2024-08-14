@@ -125,9 +125,9 @@ void WindowGtk::setCursorVisible(bool cursorVisible)
 
 void WindowGtk::onWindowRealized()
 {
+    auto window = handler_.get_window();
     if (!cursorVisible_)
     {
-        auto window = handler_.get_window();
         if (window)
         {
             window->set_cursor(Gdk::Cursor::create(Gdk::BLANK_CURSOR));
@@ -137,6 +137,14 @@ void WindowGtk::onWindowRealized()
             Log::error("[WindowGtk] Failed to set blank cursor");
         }
     }
+    auto context = window->create_gl_context();
+    context->set_use_es(-1);
+    context->make_current();
+
+    if (context->get_use_es())
+        Log::info("Using GLES");
+    else
+        Log::info("Using GL");
 }
 
 Gdk::Rectangle WindowGtk::currentMonitorGeometry()

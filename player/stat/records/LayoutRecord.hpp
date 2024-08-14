@@ -2,8 +2,6 @@
 
 #include "Record.hpp"
 
-#include <memory>
-
 namespace Stats
 {
     class LayoutRecord : public Record

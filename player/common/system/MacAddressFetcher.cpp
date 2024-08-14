@@ -2,7 +2,6 @@
 
 #include "common/logger/Logging.hpp"
 
-#include <boost/format.hpp>
 #include <netinet/in.h>
 #include <sys/ioctl.h>
 #include <sys/socket.h>

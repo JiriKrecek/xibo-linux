@@ -35,8 +35,6 @@ GstMediaPlayer::GstMediaPlayer() :
 
 GstMediaPlayer::~GstMediaPlayer()
 {
-    gst_element_set_state(glSinkBin_, GST_STATE_NULL);
-    gst_element_set_state(videoSink_, GST_STATE_NULL);
     gst_element_set_state(playbin_, GST_STATE_NULL);
     gst_object_unref(playbin_);  // videoSink_ should be unrefed as a child
     g_source_remove(busWatchId_);
