@@ -3,13 +3,20 @@
 #include "common/fs/FileSystem.hpp"
 
 #include <boost/format.hpp>
-#include <openssl/md5.h>
+#include <openssl/evp.h>
 #include <sstream>
+
+#define MD5_DIGEST_LENGTH 16
 
 Md5Hash Md5Hash::fromString(std::string_view data)
 {
     unsigned char result[MD5_DIGEST_LENGTH];
-    MD5(reinterpret_cast<const unsigned char*>(data.data()), data.size(), result);
+    unsigned int result_len = MD5_DIGEST_LENGTH;
+    EVP_MD_CTX* mdctx = EVP_MD_CTX_new();
+    EVP_DigestInit_ex(mdctx, EVP_md5(), NULL);
+    EVP_DigestUpdate(mdctx, data.data(), data.size());
+    EVP_DigestFinal_ex(mdctx, result, &result_len);
+    EVP_MD_CTX_free(mdctx);
 
     std::stringstream stream;
     for (unsigned char byte : result)

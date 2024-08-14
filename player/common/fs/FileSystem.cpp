@@ -3,11 +3,11 @@
 #include "common/fs/FilePath.hpp"
 #include "common/fs/StorageUsageInfo.hpp"
 
-#include <boost/filesystem.hpp>
+#include <filesystem>
 #include <fstream>
 #include <sstream>
 
-namespace fs = boost::filesystem;
+namespace fs = std::filesystem;
 
 bool FileSystem::isRegularFile(const FilePath& path)
 {

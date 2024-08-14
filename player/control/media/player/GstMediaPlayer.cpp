@@ -1,8 +1,8 @@
 #include "GstMediaPlayer.hpp"
 
+#include "common/constants.hpp"
 #include "common/logger/Logging.hpp"
 #include "common/types/Uri.hpp"
-#include "common/constants.hpp"
 #include "control/widgets/gtk/OutputWindowGtk.hpp"
 
 #include <gst/gst.h>
@@ -35,7 +35,9 @@ GstMediaPlayer::GstMediaPlayer() :
 
 GstMediaPlayer::~GstMediaPlayer()
 {
-    gst_element_set_state(playbin_, GST_STATE_NULL);
+    gst_element_set_state(glSinkBin_, GST_STATE_NULL);
+	gst_element_set_state(videoSink_, GST_STATE_NULL);
+	gst_element_set_state(playbin_, GST_STATE_NULL);
     gst_object_unref(playbin_);  // videoSink_ should be unrefed as a child
     g_source_remove(busWatchId_);
     // check gst_bus_remove_watch
@@ -106,8 +108,7 @@ gboolean GstMediaPlayer::busMessageWatch(GstBus* /*bus*/, GstMessage* msg, gpoin
 {
     switch (msg->type)
     {
-        case GST_MESSAGE_EOS:
-        {
+        case GST_MESSAGE_EOS: {
             assert(data);
             auto player = reinterpret_cast<GstMediaPlayer*>(data);
 
@@ -116,8 +117,7 @@ gboolean GstMediaPlayer::busMessageWatch(GstBus* /*bus*/, GstMessage* msg, gpoin
             player->playbackFinished_();
             break;
         }
-        case GST_MESSAGE_ERROR:
-        {
+        case GST_MESSAGE_ERROR: {
             GError* err = nullptr;
             gchar* debug_info = nullptr;
 

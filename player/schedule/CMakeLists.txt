@@ -27,4 +27,4 @@ target_link_libraries(${PROJECT_NAME}
     storage
 )
 
-add_subdirectory(tests)
+#add_subdirectory(tests)

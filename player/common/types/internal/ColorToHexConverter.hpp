@@ -2,6 +2,7 @@
 
 #include "common/PlayerRuntimeError.hpp"
 
+#include <cinttypes>
 #include <string>
 
 class ColorToHexConverter

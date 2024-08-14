@@ -1,5 +1,6 @@
 #pragma once
 
+#include <fmt/core.h>
 #include <string>
 
 class PlayerError
@@ -17,4 +18,13 @@ public:
 private:
     std::string domain_;
     std::string message_;
+};
+
+template <typename T>
+struct fmt::formatter<T, std::enable_if_t<std::is_base_of<PlayerError, T>::value, char>> : fmt::formatter<std::string>
+{
+    auto format(const PlayerError& e, format_context& ctx) const
+    {
+        return fmt::formatter<std::string>::format("[" + e.domain() + "] ", ctx);
+    }
 };

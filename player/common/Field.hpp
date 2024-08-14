@@ -52,7 +52,7 @@ public:
         return std::get<I>(this->values_);
     }
 
-    constexpr std::size_t size() const
+    static constexpr std::size_t size()
     {
         return sizeof...(Args);
     }
@@ -137,7 +137,7 @@ public:
         return value_;
     }
 
-    constexpr std::size_t size() const
+    static constexpr std::size_t size() 
     {
         return 1;
     }

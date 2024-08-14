@@ -3,6 +3,7 @@
 #include "common/crypto/Md5Hash.hpp"
 #include "common/dt/DateTime.hpp"
 
+#include <fmt/core.h>
 #include <istream>
 #include <string>
 #include <vector>
@@ -46,6 +47,17 @@ private:
     DownloadType downloadType_;
 };
 
+template <typename T>
+struct fmt::formatter<T, std::enable_if_t<std::is_base_of<RegularFile, T>::value, char>> : fmt::formatter<std::string>
+{
+    auto format(const RegularFile& file, format_context& ctx) const
+    {
+        std::stringstream stream;
+        stream << file;
+        return fmt::formatter<std::string>::format(stream.str(), ctx);
+    }
+};
+
 class ResourceFile
 {
 public:
@@ -67,6 +79,16 @@ private:
     DateTime lastUpdate_;
 };
 
+template <typename T>
+struct fmt::formatter<T, std::enable_if_t<std::is_base_of<ResourceFile, T>::value, char>> : fmt::formatter<std::string>
+{
+    auto format(const ResourceFile& file, format_context& ctx) const
+    {
+        std::stringstream stream;
+        stream << file;
+        return fmt::formatter<std::string>::format(stream.str(), ctx);
+    }
+};
 std::ostream& operator<<(std::ostream& out, const RegularFile& file);
 std::ostream& operator<<(std::ostream& out, const ResourceFile& res);
 

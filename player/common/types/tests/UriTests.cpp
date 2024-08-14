@@ -3,6 +3,8 @@
 #include "common/fs/FilePath.hpp"
 #include "common/types/internal/UriParser.hpp"
 
+#include <boost/optional/optional_io.hpp>
+
 TEST_P(UriValidHttpTests, FromString_ValidNetworkScheme)
 {
     auto uri = Uri::fromString(GetParam().source);

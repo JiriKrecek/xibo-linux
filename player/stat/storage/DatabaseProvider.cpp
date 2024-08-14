@@ -47,9 +47,11 @@ namespace sqlite_orm
     template <>
     struct field_printer<DateTime>
     {
-        std::time_t operator()(const DateTime& dt) const
+        std::string operator()(const DateTime& dt) const
         {
-            return dt.timestamp();
+            std::stringstream ss;
+            ss << dt.timestamp();
+            return ss.str();
         }
     };
 

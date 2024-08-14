@@ -1,5 +1,6 @@
 #pragma once
 
+#include <cinttypes>
 #include <string>
 
 struct KeyboardKey

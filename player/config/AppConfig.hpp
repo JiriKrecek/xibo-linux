@@ -15,13 +15,6 @@ public:
     static FilePath additionalResourcesDirectory();
     static FilePath configDirectory();
 
-#ifdef SNAP_ENABLED
-    static FilePath oldConfigDirectory()
-    {
-        return FilePath{getenv("SNAP_USER_DATA")};
-    }
-#endif
-
     static FilePath publicKeyPath();
     static FilePath privateKeyPath();
 

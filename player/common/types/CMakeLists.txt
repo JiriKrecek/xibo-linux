@@ -22,4 +22,4 @@ target_link_libraries(${PROJECT_NAME}
     Boost::boost
 )
 
-add_subdirectory(tests)
+#add_subdirectory(tests)

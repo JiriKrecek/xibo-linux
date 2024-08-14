@@ -73,7 +73,7 @@ void CollectionInterval::sessionFinished(const PlayerError& error)
 {
     running_ = false;
     startTimer();
-    Log::debug("[CollectionInterval] Finished. Next collection will start in {} seconds", collectInterval_);
+    Log::debug("[CollectionInterval] Finished. Next collection will start in {} seconds", collectInterval_.load());
 
     MainLoop::pushToUiThread([this, error]() { collectionFinished_(error); });
 }

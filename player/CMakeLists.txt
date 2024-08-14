@@ -11,15 +11,17 @@ find_package(PkgConfig REQUIRED)
 
 pkg_check_modules(GTKMM REQUIRED gtkmm-3.0>=3.22.0)
 pkg_check_modules(GLIBMM REQUIRED glibmm-2.4>=2.56.0)
+pkg_check_modules(SPDLOG REQUIRED spdlog>=1.11.0)
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin/)
 set(CMAKE_TESTS_DIRECTORY ${CMAKE_BINARY_DIR}/tests)
 
 set(CMAKE_EXE_LINKER_FLAGS "-static-libgcc -static-libstdc++")
 add_compile_options(
-    -pthread -Wall -Wno-parentheses -Wno-cast-function-type -W -Wunused-variable -Wunused-parameter -Wunused-function -Wunused -Wno-system-headers -Wno-deprecated -Woverloaded-virtual -Wwrite-strings
+	${SPDLOG_CFLAGS}
+	-pthread -Wall -Wno-parentheses -Wno-cast-function-type -W -Wunused-variable -Wunused-parameter -Wunused-function -Wunused -Wno-system-headers -Wno-deprecated -Woverloaded-virtual -Wwrite-strings
     "$<$<CONFIG:RELEASE>:-O2>"
-    "$<$<CONFIG:DEBUG>:-g3;-O0>"
+    "$<$<CONFIG:DEBUG>:-O;-g3>"
 )
 
 add_compile_definitions(

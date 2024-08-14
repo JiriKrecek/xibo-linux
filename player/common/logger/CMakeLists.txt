@@ -1,7 +1,5 @@
 project(logger)
 
-find_package(spdlog 1.4.1 REQUIRED)
-
 add_library(${PROJECT_NAME}
     Logging.cpp
     Logging.hpp
@@ -14,5 +12,5 @@ add_library(${PROJECT_NAME}
 
 target_link_libraries(${PROJECT_NAME}
     dt
-    spdlog::spdlog
+    ${SPDLOG_LINK_LIBRARIES}
 )

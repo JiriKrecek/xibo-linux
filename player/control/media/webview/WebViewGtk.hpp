@@ -14,6 +14,7 @@ class WebViewGtk : public WidgetGtk<Xibo::WebView>
 {
 public:
     WebViewGtk(int width, int height);
+	~WebViewGtk();
 
     void show() override;
     void setSize(int width, int height) override;

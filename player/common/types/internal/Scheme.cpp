@@ -1,5 +1,7 @@
 #include "common/types/Uri.hpp"
 
+#include <algorithm>
+
 Uri::Scheme::Scheme(const std::string& scheme) : StrongType{scheme}
 {
     std::transform(value_.begin(), value_.end(), value_.begin(), [](unsigned char c) { return std::tolower(c); });

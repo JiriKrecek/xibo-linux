@@ -1,4 +1,4 @@
 cd build
-cmake -DCMAKE_BUILD_TYPE=Debug ../player
-make
-
+cmake -G "Ninja" -DCMAKE_BUILD_TYPE=RELEASE ../player |& tee -a ./../logBuild.txt && \
+cmake --build . -j15 |& tee -a ./../logBuild.txt && \
+cmake --install . |& tee -a ./../logBuild.txt 

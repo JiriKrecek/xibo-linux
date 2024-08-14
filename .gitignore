@@ -12,3 +12,4 @@ snapcraft.login
 third_party
 *.swp
 exported.txt
+.cache

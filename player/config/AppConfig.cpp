@@ -4,11 +4,6 @@
 
 #include "common/PlayerRuntimeError.hpp"
 #include "common/fs/FileSystem.hpp"
-#include "common/logger/Logging.hpp"
-
-#if !defined(SNAP_ENABLED)
-#include "GitHash.hpp"
-#endif
 
 #include <filesystem>
 #include <linux/limits.h>
@@ -18,30 +13,19 @@ FilePath AppConfig::resourceDirectory_;
 
 std::string AppConfig::version()
 {
-    return releaseVersion() + "-" + codeVersion();
+    return releaseVersion() + "." + codeVersion();
 }
 
 std::string AppConfig::releaseVersion()
 {
-#if defined(SNAP_ENABLED)
-    return getenv("SNAP_VERSION");
-#else
     // Update this with each release.
-    return std::string{"1.8 R"} + codeVersion() + GIT_HASH;
-#endif
+    return std::string{"1.1"};
 }
 
 std::string AppConfig::codeVersion()
 {
-#if defined(SNAP_ENABLED)
-    if (boost::starts_with(getenv("SNAP_REVISION"), "x")) {
-        return "7";
-    }
-    return getenv("SNAP_REVISION");
-#else
     // Update this with each release
-    return "7";
-#endif
+    return "1";
 }
 
 FilePath AppConfig::resourceDirectory()
@@ -60,11 +44,7 @@ void AppConfig::resourceDirectory(const FilePath& directory)
 
 FilePath AppConfig::configDirectory()
 {
-#if defined(SNAP_ENABLED)
-    return FilePath{getenv("SNAP_USER_COMMON")};
-#else
-    return execDirectory();
-#endif
+    return FilePath{std::filesystem::path("/var/lib/xibo")};
 }
 
 FilePath AppConfig::publicKeyPath()
@@ -104,11 +84,7 @@ FilePath AppConfig::statsCache()
 
 FilePath AppConfig::additionalResourcesDirectory()
 {
-#if defined(SNAP_ENABLED)
-    return FilePath{getenv("SNAP")} / "usr" / "share" / "xibo-player";
-#else
-    return execDirectory();
-#endif
+    return FilePath{std::filesystem::path("/usr/share/xibo")};
 }
 
 FilePath AppConfig::splashScreenPath()
@@ -123,15 +99,7 @@ FilePath AppConfig::uiFile()
 
 FilePath AppConfig::execDirectory()
 {
-#if defined(SNAP_ENABLED)
-    return FilePath{getenv("SNAP")} / "usr" / "bin";
-#else
-    // workaround for those who starts the player out of snap
-    char result[PATH_MAX];
-    ssize_t count = readlink("/proc/self/exe", result, PATH_MAX);
-    assert(count != -1);
-    return FilePath{std::filesystem::path(std::string(result, static_cast<size_t>(count))).parent_path()};
-#endif
+    return FilePath{std::filesystem::path("/usr/bin")};
 }
 
 std::string AppConfig::playerBinary()
