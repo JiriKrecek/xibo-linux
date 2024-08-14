@@ -1,8 +1,7 @@
 #include "ProcessWatcher.hpp"
 
 ProcessWatcher::ProcessWatcher(const std::string& processBin, bool disableRestart) :
-    processPath_{processBin},
-    disableRestart_{disableRestart}
+    processPath_{processBin}, disableRestart_{disableRestart}
 {
     setupSignalHandler();
 }

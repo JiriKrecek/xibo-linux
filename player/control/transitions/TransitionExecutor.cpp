@@ -3,10 +3,7 @@
 TransitionExecutor::TransitionExecutor(Transition::Heading heading,
                                        int duration,
                                        const std::shared_ptr<Xibo::Widget>& media) :
-    heading_(heading),
-    duration_(duration),
-    media_(media),
-    timer_(std::make_unique<Timer>())
+    heading_(heading), duration_(duration), media_(media), timer_(std::make_unique<Timer>())
 {
 }
 

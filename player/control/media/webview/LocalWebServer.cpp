@@ -87,9 +87,7 @@ void handleRequest(const FilePath& rootDir, http::request<Body, http::basic_fiel
 }
 
 Session::Session(tcp::socket&& socket, const FilePath& doc_root) :
-    m_socket(std::move(socket)),
-    m_rootDirectory(doc_root),
-    m_lambda(*this)
+    m_socket(std::move(socket)), m_rootDirectory(doc_root), m_lambda(*this)
 {
 }
 

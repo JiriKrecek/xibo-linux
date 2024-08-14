@@ -7,8 +7,7 @@ FlyTransitionExecutor::FlyTransitionExecutor(Transition::Heading heading,
                                              Transition::Direction direction,
                                              int duration,
                                              const std::shared_ptr<Xibo::Widget>& media) :
-    TransitionExecutor(heading, duration, media),
-    direction_(direction)
+    TransitionExecutor(heading, duration, media), direction_(direction)
 {
 }
 

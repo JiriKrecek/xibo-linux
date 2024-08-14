@@ -5,9 +5,9 @@
 #include "control/media/player/MediaPlayerResources.hpp"
 #include "control/media/player/audio/AudioFactory.hpp"
 
+#include "common/constants.hpp"
 #include "common/fs/FileSystem.hpp"
 #include "common/fs/Resource.hpp"
-#include "common/constants.hpp"
 
 const bool DefaultAudioLooped = false;
 const int DefaultDuration = 0;

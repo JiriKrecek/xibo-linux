@@ -3,9 +3,7 @@
 Uri::Authority::Authority(const boost::optional<Uri::UserInfo>& userInfo,
                           const Uri::Host& host,
                           const boost::optional<Uri::Port>& port) :
-    userInfo_(userInfo),
-    host_(host),
-    port_(port)
+    userInfo_(userInfo), host_(host), port_(port)
 {
 }
 

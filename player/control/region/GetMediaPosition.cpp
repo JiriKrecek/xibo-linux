@@ -4,8 +4,7 @@ const int DefaultPos = 0;
 const int InvalidPos = -1;
 
 GetMediaPosition::GetMediaPosition(int regionWidth, int regionHeight) :
-    regionWidth_(regionWidth),
-    regionHeight_(regionHeight)
+    regionWidth_(regionWidth), regionHeight_(regionHeight)
 {
 }
 

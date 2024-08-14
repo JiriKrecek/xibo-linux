@@ -1,8 +1,8 @@
 #pragma once
 
+#include "common/constants.hpp"
 #include "common/crypto/CryptoUtils.hpp"
 #include "common/types/Uri.hpp"
-#include "common/constants.hpp"
 
 #include <boost/beast/http/message.hpp>
 #include <boost/beast/http/string_body.hpp>
@@ -19,10 +19,7 @@ public:
                      const boost::optional<Uri::UserInfo>& proxyUserInfo,
                      const Uri& target,
                      const std::string& body) :
-        method_(method),
-        proxyUserInfo_(proxyUserInfo),
-        target_(target),
-        body_(std::move(body))
+        method_(method), proxyUserInfo_(proxyUserInfo), target_(target), body_(std::move(body))
     {
     }
 

@@ -11,13 +11,11 @@ class Field
 public:
     explicit Field() : Field(Args{}...) {}
     explicit Field(const Args&... defaultValue) :
-        values_{std::make_tuple(defaultValue...)},
-        valueChanged_(std::make_shared<ValueChanged>())
+        values_{std::make_tuple(defaultValue...)}, valueChanged_(std::make_shared<ValueChanged>())
     {
     }
     explicit Field(Args&&... defaultValue) :
-        values_{std::make_tuple(std::move(defaultValue)...)},
-        valueChanged_(std::make_shared<ValueChanged>())
+        values_{std::make_tuple(std::move(defaultValue)...)}, valueChanged_(std::make_shared<ValueChanged>())
     {
     }
 
@@ -137,7 +135,7 @@ public:
         return value_;
     }
 
-    static constexpr std::size_t size() 
+    static constexpr std::size_t size()
     {
         return 1;
     }

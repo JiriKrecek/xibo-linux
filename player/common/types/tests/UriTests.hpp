@@ -17,12 +17,7 @@ struct UriTest
             boost::optional<unsigned short> port_,
             std::string path_,
             std::string str_ = {}) :
-        source(source_),
-        scheme(scheme_),
-        host(host_),
-        port(port_),
-        path(path_),
-        str(str_.empty() ? source_ : str_)
+        source(source_), scheme(scheme_), host(host_), port(port_), path(path_), str(str_.empty() ? source_ : str_)
     {
     }
 

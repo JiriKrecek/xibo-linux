@@ -2,10 +2,10 @@
 
 #include "MainLoop.hpp"
 
-#include "common/parsing/Parsing.hpp"
 #include "common/crypto/RsaManager.hpp"
 #include "common/dt/DateTime.hpp"
 #include "common/logger/Logging.hpp"
+#include "common/parsing/Parsing.hpp"
 #include "config/AppConfig.hpp"
 
 const size_t CHANNEL_PART = 0;

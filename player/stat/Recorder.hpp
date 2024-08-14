@@ -1,9 +1,9 @@
 #pragma once
 
-#include "storage/DataProvider.hpp"
-#include "records/Records.hpp"
-#include "records/LayoutRecord.hpp"
 #include "PlayingTime.hpp"
+#include "records/LayoutRecord.hpp"
+#include "records/Records.hpp"
+#include "storage/DataProvider.hpp"
 
 #include "common/PlayerRuntimeError.hpp"
 

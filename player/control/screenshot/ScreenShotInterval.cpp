@@ -7,9 +7,7 @@
 const int DefaultInterval = 0;
 
 ScreenShotInterval::ScreenShotInterval(XmdsRequestSender& sender, Xibo::Window& window) :
-    sender_(sender),
-    screenShoter_(ScreenShoterFactory::create(window)),
-    interval_(DefaultInterval)
+    sender_(sender), screenShoter_(ScreenShoterFactory::create(window)), interval_(DefaultInterval)
 {
 }
 

@@ -2,8 +2,8 @@
 
 #include <boost/thread/future.hpp>
 
-#include "networking/ResponseResult.hpp"
 #include "cms/xmds/GetFile.hpp"
+#include "networking/ResponseResult.hpp"
 
 using DownloadXmdsFilesResult = std::vector<boost::future<ResponseResult<GetFile::Result>>>;
 using XmdsResponseResult = ResponseResult<std::string>;

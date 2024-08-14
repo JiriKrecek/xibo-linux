@@ -17,8 +17,7 @@ public:
     };
 
     explicit NamedField(FieldWithName<Args>&&... fields) :
-        Field<Args...>{std::move(fields.value)...},
-        names_{std::move(fields.name)...}
+        Field<Args...>{std::move(fields.value)...}, names_{std::move(fields.name)...}
     {
     }
 

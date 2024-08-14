@@ -2,9 +2,7 @@
 #include "common/constants.hpp"
 
 MediaImpl::MediaImpl(const MediaOptions& options) :
-    options_(options),
-    timer_(std::make_unique<Timer>()),
-    playing_(false)
+    options_(options), timer_(std::make_unique<Timer>()), playing_(false)
 {
     assert(timer_);
 }

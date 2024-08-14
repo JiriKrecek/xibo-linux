@@ -1,8 +1,8 @@
 #include "XmlLogsRetriever.hpp"
 
-#include "common/parsing/Parsing.hpp"
 #include "common/logger/Logging.hpp"
 #include "common/logger/XmlLogsRepo.hpp"
+#include "common/parsing/Parsing.hpp"
 
 // TODO: move to SubmitLogs request where it should format logs according to required CMS format
 

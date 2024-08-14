@@ -5,8 +5,7 @@
 #include <boost/algorithm/string/join.hpp>
 
 StatusScreenGtk::StatusScreenGtk(WindowGtk& parentWindow, int width, int height) :
-    WidgetGtk(dialog_),
-    dialog_{"", parentWindow.handler()}
+    WidgetGtk(dialog_), dialog_{"", parentWindow.handler()}
 {
     WidgetGtk::setSize(width, height);
 

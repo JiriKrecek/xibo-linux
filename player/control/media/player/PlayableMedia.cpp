@@ -1,8 +1,7 @@
 #include "PlayableMedia.hpp"
 
 PlayableMedia::PlayableMedia(const MediaPlayerOptions& options, std::unique_ptr<Xibo::MediaPlayer>&& player) :
-    MediaImpl(options),
-    player_(std::move(player))
+    MediaImpl(options), player_(std::move(player))
 {
     assert(player_);
 

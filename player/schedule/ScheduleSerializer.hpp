@@ -1,7 +1,7 @@
 #pragma once
 
-#include "common/parsing/Parsing.hpp"
 #include "common/PlayerRuntimeError.hpp"
+#include "common/parsing/Parsing.hpp"
 #include "schedule/LayoutSchedule.hpp"
 
 class FilePath;

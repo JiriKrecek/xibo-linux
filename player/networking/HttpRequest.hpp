@@ -14,9 +14,7 @@ class HttpRequest
 {
 public:
     HttpRequest(http::verb method, const Uri& uri, const std::string& body) :
-        method_(method),
-        uri_(uri),
-        body_(std::move(body))
+        method_(method), uri_(uri), body_(std::move(body))
     {
     }
 

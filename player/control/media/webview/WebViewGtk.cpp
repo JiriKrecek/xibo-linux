@@ -24,9 +24,7 @@ WebViewGtk::WebViewGtk(int width, int height) : WidgetGtk{handler_}
     });
 }
 
-WebViewGtk::~WebViewGtk()
-{
-}
+WebViewGtk::~WebViewGtk() {}
 
 void WebViewGtk::show()
 {

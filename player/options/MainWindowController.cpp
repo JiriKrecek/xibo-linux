@@ -10,8 +10,7 @@
 #include "config/AppConfig.hpp"
 
 MainWindowController::MainWindowController(Gtk::Window* window, const Glib::RefPtr<Gtk::Builder>& ui) :
-    ui_(ui),
-    mainWindow_(window)
+    ui_(ui), mainWindow_(window)
 {
     cmsSettings_.fromFile(AppConfig::cmsSettingsPath());
     playerSettings_.fromFile(AppConfig::playerSettingsPath());
@@ -87,9 +86,9 @@ std::string MainWindowController::connectToCms(const std::string& cmsAddress,
     {
         XmdsRequestSender xmdsRequester{cmsAddress, key, displayId};
 
-                
         auto connectionResult =
-            xmdsRequester.registerDisplay(AppConfig::codeVersion(), AppConfig::releaseVersion(), playerSettings_.displayName())
+            xmdsRequester
+                .registerDisplay(AppConfig::codeVersion(), AppConfig::releaseVersion(), playerSettings_.displayName())
                 .then([](auto future) {
                     auto [error, result] = future.get();
 

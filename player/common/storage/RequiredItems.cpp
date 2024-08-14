@@ -65,13 +65,7 @@ RegularFile::RegularFile(int id,
                          const std::string& name,
                          const std::string& type,
                          RegularFile::DownloadType downloadType) :
-    id_{id},
-    size_{size},
-    hash_{hash},
-    url_{url},
-    name_{name},
-    type_{type},
-    downloadType_{downloadType}
+    id_{id}, size_{size}, hash_{hash}, url_{url}, name_{name}, type_{type}, downloadType_{downloadType}
 {
 }
 
@@ -81,10 +75,7 @@ int RegularFile::id() const
 }
 
 ResourceFile::ResourceFile(int layoutId, int regionId, int mediaId, const DateTime& lastUpdate) :
-    layoutId_{layoutId},
-    regionId_{regionId},
-    mediaId_{mediaId},
-    lastUpdate_{lastUpdate}
+    layoutId_{layoutId}, regionId_{regionId}, mediaId_{mediaId}, lastUpdate_{lastUpdate}
 {
 }
 

@@ -5,14 +5,14 @@
 #include "RecordVisitor.hpp"
 #include "Records.hpp"
 
-#include "common/parsing/Parsing.hpp"
 #include "common/PlayerRuntimeError.hpp"
+#include "common/parsing/Parsing.hpp"
 
 namespace Stats
 {
     class XmlFormatter : public RecordVisitor
     {
-        DECLARE_EXCEPTION(Stats::XmlFormatter)        
+        DECLARE_EXCEPTION(Stats::XmlFormatter)
     public:
         std::string format(const Records& records) const;
 

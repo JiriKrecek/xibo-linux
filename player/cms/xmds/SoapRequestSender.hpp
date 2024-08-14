@@ -1,8 +1,8 @@
 #pragma once
 
+#include "cms/xmds/Soap.hpp"
 #include "networking/HttpClient.hpp"
 #include "networking/ResponseResult.hpp"
-#include "cms/xmds/Soap.hpp"
 
 namespace SoapRequestHelper
 {

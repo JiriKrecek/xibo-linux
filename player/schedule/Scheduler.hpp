@@ -23,7 +23,7 @@ public:
     LayoutId nextLayout() const;
     LayoutId currentLayoutId() const;
     OverlaysIds overlayLayouts() const;
-    SchedulerStatus status() const;     // TODO tests
+    SchedulerStatus status() const;       // TODO tests
     int scheduleIdBy(LayoutId id) const;  // TODO tests
 
     SignalScheduleUpdated& scheduleUpdated();

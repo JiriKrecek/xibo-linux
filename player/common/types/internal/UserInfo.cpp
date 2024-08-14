@@ -3,8 +3,7 @@
 #include <boost/algorithm/string.hpp>
 
 Uri::UserInfo::UserInfo(const std::string& username, const std::string& password) :
-    username_(username),
-    password_(password)
+    username_(username), password_(password)
 {
     if (username.empty()) throw Error{"Uri::UserInfo", "Username can't be empty"};
 
