@@ -1,6 +1,8 @@
 #include "WindowGtk.hpp"
 
 #include "common/logger/Logging.hpp"
+#include <gdkmm/glcontext.h>
+#include <gdkmm/window.h>
 
 #include <boost/format.hpp>
 #include <gdk/gdkx.h>

@@ -1,0 +1,7 @@
+Soubory ./player/common/crypto/Md5Hash.cpp a ../../xibo-linux/player/common/crypto/Md5Hash.cpp jsou různé
+Soubory ./player/common/crypto/Md5Hash.hpp a ../../xibo-linux/player/common/crypto/Md5Hash.hpp jsou různé
+Soubory ./player/common/dt/DateTime.hpp a ../../xibo-linux/player/common/dt/DateTime.hpp jsou různé
+Soubory ./player/common/dt/Timer.hpp a ../../xibo-linux/player/common/dt/Timer.hpp jsou různé <---------------std::async
+Soubory ./player/common/types/tests/UriTests.cpp a ../../xibo-linux/player/common/types/tests/UriTests.cpp jsou různé
+Soubory ./player/config/CMakeLists.txt a ../../xibo-linux/player/config/CMakeLists.txt jsou různé
+Soubory ./player/watchdog/main.cpp a ../../xibo-linux/player/watchdog/main.cpp jsou různé

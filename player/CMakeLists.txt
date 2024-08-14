@@ -16,7 +16,7 @@ pkg_check_modules(SPDLOG REQUIRED spdlog>=1.11.0)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin/)
 set(CMAKE_TESTS_DIRECTORY ${CMAKE_BINARY_DIR}/tests)
 
-set(CMAKE_EXE_LINKER_FLAGS "-static-libgcc -static-libstdc++")
+#set(CMAKE_EXE_LINKER_FLAGS "-static-libgcc -static-libstdc++")
 add_compile_options(
 	${SPDLOG_CFLAGS}
 	-pthread -Wall -Wno-parentheses -Wno-cast-function-type -W -Wunused-variable -Wunused-parameter -Wunused-function -Wunused -Wno-system-headers -Wno-deprecated -Woverloaded-virtual -Wwrite-strings
